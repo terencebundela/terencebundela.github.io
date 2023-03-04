@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Monoton&family=Pacifico&family=Passions+Conflict&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Syne+Mono&display=swap');
+
+#resume-btn:hover {
+    background-color: #eb3842;
+}
+
+/* Button Animation */
+
+.exp {
+    position: relative;
+    bottom: 6%;
+}
+
+.vector-image {
+    position: relative;
+    top: 6rem;
+}

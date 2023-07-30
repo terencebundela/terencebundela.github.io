@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Monoton&family=Pacifico&family=Passions+Conflict&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Syne+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Your+Typewriter+Font&display=swap");
 
 /* second container for positiong hidden content under navigation bar */
 
@@ -52,7 +53,7 @@
     }
 
     to {
-      width: 18.1em;
+      width: 20em;
       border-right: 0.15em solid transparent;
     }
   }
@@ -69,7 +70,7 @@
     }
 
     to {
-      width: 14.3em;
+      width: 15.1em;
       border-right: 0.15em solid transparent;
     }
   }
@@ -87,4 +88,96 @@
 
   /*  */
 
+/* Loader container */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Loader animation */
+.loader {
+  border: 5px solid #f3f3f3; /* Light grey */
+  border-top: 5px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite; /* Adjust the animation duration as needed */
+}
+
+/* Loader animation keyframes */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Loader css */
  
+/* Loader container */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background */
+  z-index: 9999; /* Ensure the loader appears above other elements */
+}
+
+/* Loader animation */
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+

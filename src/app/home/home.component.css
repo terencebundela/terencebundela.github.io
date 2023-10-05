@@ -181,3 +181,8 @@
   }
 }
 
+.your-image-background {
+  height: 30rem;
+  z-index: -1;
+  border-radius: 70px;
+}

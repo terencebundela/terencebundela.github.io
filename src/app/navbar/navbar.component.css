@@ -78,4 +78,11 @@
     /* font-family: 'Moon Dance', cursive; */
     font-family: 'Passions Conflict', cursive;
     font-size: 36px;
+    width: 200px;
+}
+
+#resume-btn {
+    height: 50px;
+    width:800px;
+
 }

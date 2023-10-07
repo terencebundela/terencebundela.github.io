@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Syne+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Your+Typewriter+Font&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 /* second container for positiong hidden content under navigation bar */
 
 
@@ -185,4 +185,46 @@
   height: 30rem;
   z-index: -1;
   border-radius: 70px;
+}
+
+
+/* #triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-right: 50px solid #333;
+    border-bottom: 25px solid transparent;
+} */
+
+.play-button-container {
+  position: relative;
+  display: inline-block;
+}
+
+.play-button {
+  width: 330px;
+  height: 330px;
+  background-color: #111;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.play-icon {
+  font-size: 300px;
+  color: #333;
+  border-color: black;
+  margin-right: 600px;
+  margin-top: 70px;
+  transform: rotate(180deg);
+}
+
+img {
+  position: relative;
 }

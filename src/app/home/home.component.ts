@@ -29,10 +29,18 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  // ngAfterViewInit() {
+  //   // Hide the navigation bar after the loader has completed
+  //   setTimeout(() => {
+  //     this.contentWrapper.nativeElement.style.display = 'block';
+  //   }, 1000);
+  // }
+
   ngAfterViewInit() {
-    // Hide the navigation bar after the loader has completed
-    setTimeout(() => {
+    // Check if contentWrapper is defined before accessing nativeElement
+    if (this.contentWrapper) {
       this.contentWrapper.nativeElement.style.display = 'block';
-    }, 1000);
+    }
   }
+  
 }

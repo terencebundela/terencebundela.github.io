@@ -1,37 +1,22 @@
 <!-- Loader -->
-
 <div id="loader" class="loader-container" *ngIf="isPageLoading">
   <div class="lds-ripple"><div></div><div></div></div>
 </div>
 
 <!-- Content -->
-
 <div id="home" class="container-fluid text-center h-100 w-100 d-inline-block" *ngIf="!isPageLoading">
   <div class="row">
-    <div class="container-fluid p-0" style="height: 100vh">
+    <div class="container-fluid p-0" style="min-height: 100vh;">
       <div class="row h-100 align-items-center">
-        <div class="col-md-6 text-center">
+        <div class="col-md-6 text-center mb-4 mb-md-0">
           <h1 class="text-light">
-            <div
-              class="col mt-5"
-              style="
-                font-family: 'Poppins', sans-serif;
-                font-size: 4rem;
-                color: #181823;
-              "
-            >
-              <span class="opacity-100" style="color: #537FE7">Software</span>
-              Engineer
+            <div class="col mt-5" style="font-family: 'Poppins', sans-serif; font-size: 4rem; color: #181823;">
+              <span class="opacity-100" style="color: #537FE7">Software</span> Engineer
             </div>
           </h1>
-          <div
-            class="home-intro container-fluid h3 text-center mt-5"
-            style="color: #062832; font-family:'Courier New', Courier, monospace"
-          >
-            <p class="typewritter-text mx-auto">
-              Hello, My Name is Terence Bundela
-            </p>
-            <p class="typewritter-text2 mx-auto">I am a Software Developer</p>
+          <div class="home-intro container-fluid h3 text-center mt-5" style="color: #062832; font-family:'Courier New', Courier, monospace">
+            <p class="typewriter-text mx-auto">Hello, My Name is Terence Bundela</p>
+            <p class="typewriter-text2 mx-auto">I am a Software Developer</p>
           </div>
         </div>
         <div class="col-md-6 d-flex justify-content-center">
@@ -39,114 +24,63 @@
             <div class="play-button">
               <div class="play-icon">►</div>
             </div>
-            <img
-              src="assets/terence-toon.png"
-              width="220px"
-              height="250px"
-              alt="terence-toon"
-            />
+            <img src="assets/terence-toon.png" width="220px" height="250px" alt="terence-toon" />
           </div>
-          
-        
         </div>
       </div>
     </div>
   </div>
-  <!-- About me -->
 
-  <section id="" class="w-100">
+  <!-- About me -->
+  <section class="w-100">
     <div class="container">
       <div class="d-flex justify-content-center align-items-center">
-        <h2
-          class="text-center mt-5 mb-4 p-2"
-          style="
-            font-family: 'Poppins', sans-serif;
-            font-weight: bolder;
-            font-size: 1.3rem;
-            color: #fff;
-            background-color: #537FE7;
-            border-bottom-left-radius: 90%;
-            border-top-left-radius:90% ;
-            border-top-right-radius: 90%;
-
-            width: 16rem;
-          "
-        >
-        Life and Career
-        </h2>
+        <h2 class="text-center mt-5 mb-4 p-2 rounded" style="font-family: 'Poppins', sans-serif; font-weight: bolder; font-size: 1.3rem; color: #fff; background-color: #537FE7; border-radius: 50%; width: 16rem;">Life and Career</h2>
       </div>
       
       <div class="row align-items-center">
-        <div
-          class="col-md-4 mb-4 mr-3 your-image-background"
-          style="transform: rotate(45deg);"
-        >
+        <div class="col-md-4 mb-4 mr-3" style="transform: rotate(45deg);">
+          <div class="your-image-background"
+            style="background-image: url('assets/developer_activity_re_39tg.svg'); background-size: 220px 220px; width: 100%; height: 100%;"
+          ></div>
           <img src="assets/developer_activity_re_39tg.svg" alt="Your Image" class="img-fluid" style="transform: rotate(-45deg);" />
         </div>
-        <div
-          class="col-md-8 my-md-5"
-        >
+        
+        <div class="col-md-8 my-md-5">
           <p class="lead text-start" style="color: #062832">
-            As an experienced Front-End Developer, I create visually stunning
-            and responsive layouts,<br />
-            adapting seamlessly across devices. Proficient in HTML, CSS, and
-            JavaScript, I expanded my <br />
-            skills to include Angular and Bootstrap for dynamic digital
-            experiences.<br />
-            <br />
-            Expert in API integration, I ensure smooth user interactions and
-            seamless data flow.<br />
-            Collaborating with clients, I deliver tailored solutions aligned
-            with their unique needs.<br />
-            <br />
-            My career highlights attention to detail, delivering high-quality
-            websites through <br />
-            thorough testing and debugging. Managing multiple projects, I meet
-            deadlines and exceed client <br />
-            expectations.<br />
-            <br />
-            Furthering my knowledge in C#, ASP.Net MVC, Web Forms, JavaScript,
-            jQuery, Ajax, and <br />
-            Web API, I excel in three-tier and N-tier application architecture.
-            Git (SourceTree) facilitates <br />
-            version control.<br />
-            <br />
-            Troubleshooting through Visual Studio and browsers, I optimize code
-            for performance <br />
-            improvement, delivering efficient software applications.<br />
-            <br />
-            Passionate about staying updated on trends, I offer innovative,
-            user-centric digital solutions.<br />
-            Let's collaborate and bring your ideas to life!
+            My journey began as a musician, where I expressed myself through melodies and rhythms. However, I soon found another passion—creating digital experiences as a Front-End Developer.
+        
+            As a seasoned developer, I craft visually captivating and responsive layouts that seamlessly adapt to various devices. My proficiency in HTML, CSS, and JavaScript forms the foundation, and I've extended my skills to include Angular and Bootstrap for dynamic digital experiences.
+        
+            Beyond coding, I excel in API integration, ensuring smooth user interactions and seamless data flow. My collaborative approach involves working closely with clients to deliver tailored solutions that align with their unique needs.
+        
+            My career is highlighted by an unwavering attention to detail, resulting in high-quality websites delivered through rigorous testing and debugging. Managing multiple projects is second nature, as I consistently meet deadlines and exceed client expectations.
+        
+            I've broadened my knowledge base to include C#, ASP.Net MVC, Web Forms, JavaScript, jQuery, Ajax, and Web API. This expertise allows me to excel in designing three-tier and N-tier application architectures. Git (SourceTree) facilitates version control for seamless collaboration.
+        
+            Troubleshooting is my forte, whether it's within Visual Studio or browsers. I continuously optimize code for performance improvements, ensuring the delivery of efficient software applications.
+        
+            My passion lies in staying updated on industry trends, allowing me to offer innovative, user-centric digital solutions. Let's collaborate and bring your ideas to life!
+            
+            It's worth noting that my journey from music to software development has equipped me with a unique perspective and a creative approach to problem-solving. I'm excited to combine my musical background with my technical skills to create extraordinary experiences.
           </p>
         </div>
+        
       </div>
     </div>
   </section>
 
-  <!--Frontend Technologies  -->
+  <!-- Frontend Technologies -->
   <div class="container-fluid p-5">
     <div class="container mt-5">
       <div class="row">
         <div class="col-md-12">
           <div class="d-flex justify-content-center align-items-center">
-            <h2
-              class="mt-5 mb-4 p-2 rounded"
-              style="
-                font-family: 'Poppins', sans-serif;
-                font-weight: bolder;
-                font-size: 2rem;
-                color: #181823;
-                width: 36rem;
-              "
-            >
-            Software Technology Stack
-            </h2>
+            <h2 class="mt-5 mb-4 p-2 rounded" style="font-family: 'Poppins', sans-serif; font-weight: bolder; font-size: 2rem; color: #181823; width: 36rem;">Software Technology Stack</h2>
           </div>
         </div>
       </div>
     </div>
-
     <div class="container mt-5" style="color: #062832">
       <div class="row">
         <div class="col-md-3">
@@ -231,17 +165,10 @@
         </div>
       </div>
     </div>
-    
-    
-    
   </div>
 
-  <!--Footer  -->
-
-  <footer
-    class="text-center bg-dark text-lg-start mt-5 rounded p-3"
-    style="color: #fff; background-color: #C69B7B;"
-  >
+  <!-- Footer -->
+  <footer class="text-center bg-dark text-lg-start mt-5 rounded p-3" style="color: #fff; background-color: #C69B7B;">
     <div class="container p-4">
       <div class="row">
         <div class="col-lg-1">
@@ -261,10 +188,7 @@
         </div>
         <div class="col-md-5 text-center">&copy; 2023 Terence Bundela</div>
         <div class="col-lg-4 text-center text-lg-center">
-          Designed and developed by
-          <em class="h3" style="font-family: 'Passions Conflict', cursive"
-            >Terence Bundela</em
-          >
+          Designed and developed by <em class="h3" style="font-family: 'Passions Conflict', cursive">Terence Bundela</em>
         </div>
       </div>
     </div>

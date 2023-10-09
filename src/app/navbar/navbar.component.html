@@ -1,32 +1,37 @@
-<nav
-  id="n-bar"
-  class="navbar sticky-top z-3 fixed-top bg-body-tertiary border-bottom navbar-expand-lg"
-  style="background-color: #E9F8F9; height: 80px;"
->
-  <div class="container-fluid d-flex justify-content-between align-items-center" style="height: 100%;"> <!-- Use justify-content-between to separate the elements -->
-    <a class="navbar-brand rounded text-center" id="terence-bundela" href="#" style="color: #537FE7">Terence Bundela</a>
-    <ul class="navbar-nav mx-auto"> <!-- Center-align the nav-links -->
-      <li class="nav-item mx-3">
-        <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/">Home</a>
-      </li>
-      <li class="nav-item mx-3">
-        <a class="nav-link" routerLinkActive="active" routerLink="/about">About</a>
-      </li>
-      <li class="nav-item mx-3">
-        <a class="nav-link" routerLinkActive="active" routerLink="/projects">Projects</a>
-      </li>
-      <li class="nav-item mx-3">
-        <a class="nav-link" routerLinkActive="active" routerLink="/contact">Contact</a>
-      </li>
-    </ul>
-    <a
-  id="resume-btn"
-  href="assets/Terence Bundela.pdf"
-  class="btn btn-secondary rounded d-flex justify-content-center align-items-center"
-  style="width: 140px; height: 50px; background-color: #537FE7;"
->
-  Resume
-</a>
+<nav id="n-bar" class="navbar sticky-top z-3 fixed-top navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" id="terence-bundela" href="#" style="color: #537FE7">Terence Bundela</a>
 
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/contact">Contact</a>
+        </li>
+        <!-- Resume button is included as a Nav-Item for responsive mode -->
+        <li class="nav-item d-lg-none">
+          <a class="nav-link" href="assets/Terence Bundela.pdf" style="color: #537FE7;">Resume</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Resume button outside of the Toggler for larger screens -->
+    <div class="d-none d-lg-block">
+      <a id="resume-btn" href="assets/Terence Bundela.pdf" class="btn btn-secondary rounded"
+        style="background-color: #537FE7; width: 140px;">Resume</a>
+    </div>
   </div>
 </nav>

@@ -1,125 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Monoton&family=Pacifico&family=Passions+Conflict&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Syne+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-/* @import url("https://fonts.googleapis.com/css2?family=Your+Typewriter+Font&display=swap"); */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
-/* second container for positiong hidden content under navigation bar */
-
-
-
-/* home-page */
-#home {
-    position: absolute;
-    top: 7%;
-    left: 0;
-    width: 100%;
-    height: 92%;
+/* General styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #181823;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-/* Typing Effects CSS */
-
-.typewritter{
-	font-family: monospace;
-	display: inline-block
+h1, h2, h3, p {
+  margin: 0;
 }
 
-.typewritter-text:nth-child(1){
-    white-space: nowrap;
-    overflow: hidden;
-    width: 24em;
-
-
-    animation: typewritter 2.5s steps(40, end);
-
-    animation-fill-mode: forwards;
-    border-right: 0.15em solid transparent;
-}
-.typewritter-text2:nth-child(2) {
-    white-space: nowrap;
-    overflow: hidden;
-    width: 40em;
-    animation: typewritter2 2.5s steps(44, end) 1s 1 normal both,
-      blinkTextCursor 500ms steps(44, end) 8;
-    animation-delay: 2.2s;
-    border-right: 0.15em solid transparent;
-}
-
-
-
-@keyframes typewritter {
-    from {
-      width: 0;
-      border-right: 2px solid #062832;
-    }
-
-    to {
-      width: 20em;
-      border-right: 0.15em solid transparent;
-    }
-  }
-
-  @keyframes typewritter2 {
-    from {
-      width: 0;
-
-      border: none;
-    }
-
-    1% {
-      border-right: 2px solid #062832;
-    }
-
-    to {
-      width: 15.1em;
-      border-right: 0.15em solid transparent;
-    }
-  }
-
-  @keyframes blinkTextCursor {
-    from {
-      border-right-color: #062832;
-    }
-
-    to {
-      border-right-color: transparent;
-    }
-  }
-
-
-  /*  */
-
-/* Loader container */
-.loader-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-/* Loader animation */
-.loader {
-  border: 5px solid #f3f3f3; /* Light grey */
-  border-top: 5px solid #3498db; /* Blue */
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 2s linear infinite; /* Adjust the animation duration as needed */
-}
-
-/* Loader animation keyframes */
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-
-/* Loader css */
- 
-/* Loader container */
+/* Loader styles */
 .loader-container {
   position: fixed;
   top: 0;
@@ -129,17 +22,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background */
-  z-index: 9999; /* Ensure the loader appears above other elements */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
 }
 
-/* Loader animation */
 .lds-ripple {
   display: inline-block;
   position: relative;
   width: 80px;
   height: 80px;
 }
+
 .lds-ripple div {
   position: absolute;
   border: 4px solid #fff;
@@ -147,9 +40,7 @@
   border-radius: 50%;
   animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
-.lds-ripple div:nth-child(2) {
-  animation-delay: -0.5s;
-}
+
 @keyframes lds-ripple {
   0% {
     top: 36px;
@@ -181,50 +72,327 @@
   }
 }
 
-.your-image-background {
-  height: 30rem;
-  z-index: -1;
-  border-radius: 70px;
-  background-color: #C0EEF2;
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #537FE7 0%, #181823 100%);
 }
 
+.highlight {
+  color: #537FE7;
+  font-weight: bold;
+  font-size: 4rem;
+}
 
-/* #triangle-left {
+/* Typing Effects */
+.typewriter-text,
+.typewriter-text2 {
+  font-family: 'Courier New', Courier, monospace;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid #062832;
+  animation: blinkTextCursor 500ms steps(44, end) infinite;
+}
+
+.typewriter-text {
+  animation: typewriter 3s steps(30, end) 0.5s forwards; /* Adds slight delay before starting */
+  width: 0; /* Initial width set to 0 for proper animation */
+}
+
+.typewriter-text2 {
+  animation: typewriter2 4s steps(44, end) 3.5s forwards; /* Starts after the first animation completes */
+  width: 0; /* Initial width set to 0 for proper animation */
+}
+
+@keyframes typewriter {
+  from {
     width: 0;
-    height: 0;
-    border-top: 25px solid transparent;
-    border-right: 50px solid #333;
-    border-bottom: 25px solid transparent;
-} */
+    border-right: 0.1em solid #062832;
+  }
 
-.play-button-container {
+  to {
+    width: 24em; /* Adjust width based on the actual text length */
+    border-right: 0.15em solid transparent;
+  }
+}
+
+@keyframes typewriter2 {
+  from {
+    width: 0;
+    border-right: 0.15em solid #062832;
+  }
+
+  to {
+    width: 36em; /* Adjust width based on the actual text length */
+    border-right: 0.15em solid transparent;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: #062832;
+  }
+
+  to {
+    border-right-color: transparent;
+  }
+}
+/* About Section */
+.about-section {
+  background: linear-gradient(135deg, #1c1c1c 0%, #333 100%);
+  padding: 80px 0;
+  color: #fff;
+}
+
+.section-header {
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #e74c3c;
   position: relative;
   display: inline-block;
 }
 
-.play-button {
-  width: 330px;
-  height: 330px;
-  background-color: #181823;
-  border-radius: 50%;
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #e74c3c;
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  animation: slideIn 1s ease-out;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  color: #b0bec5;
+  margin-top: 10px;
+  font-weight: 300;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.image-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s ease-out;
 }
 
-.play-icon {
-  font-size: 300px;
-  color: #537FE7;
-  border-color: black;
-  margin-top: 50px;
-  transform: rotate(180deg);
-}
-
-img {
+.image-frame {
+  display: inline-block;
   position: relative;
+  border: 5px solid #e74c3c;
+  border-radius: 15px;
+  padding: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-frame:hover {
+  transform: scale(1.05);
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.about-text {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-weight: 300;
+  animation: fadeIn 2s ease-out;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Developer Image Container */
+.image-container {
+  max-width: 30rem;
+  max-height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #537FE7, #181823);
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Drop shadow for depth */
+}
+
+/* Developer Image Styling */
+.developer-image {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition for hover effects */
+  border-radius: 12px; /* Slight rounding to match container */
+  border: 5px solid rgba(255, 255, 255, 0.2); /* Subtle border effect */
+}
+
+/* Hover Effect */
+.image-container:hover .developer-image {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 15px 25px rgba(83, 127, 231, 0.5); /* Enhanced shadow/glow on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .image-container {
+    padding: 15px; /* Reduce padding on smaller screens */
+  }
+
+  .developer-image {
+    border-radius: 10px; /* Adjust border radius for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container {
+    padding: 10px; /* Further reduce padding on very small screens */
+  }
+
+  .developer-image {
+    border-radius: 8px; /* Further adjust border radius for very small screens */
+  }
+}
+
+/* Technology Stack Section */
+.tech-stack-section {
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+  padding: 80px 0;
+  color: #fff;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #e74c3c;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #e74c3c;
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  animation: slideIn 1s ease-out;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  color: #b0bec5;
+  margin-top: 10px;
+  font-weight: 300;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.tech-item {
+  padding: 20px;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+  background: #444;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tech-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.tech-item p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.tech-item:hover {
+  transform: translateY(-10px);
+  background: #555;
+}
+
+.tech-item:hover img {
+  transform: scale(1.2);
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Footer */
+.footer {
+  background-color: #181823;
+  color: #C0EEF2;
+  padding: 20px 0;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #C0EEF2;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #537FE7;
 }

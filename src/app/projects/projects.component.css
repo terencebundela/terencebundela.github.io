@@ -1,32 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Syne+Mono&display=swap');
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
+/* Overall Background */
 #projects {
-  position: relative;
-  top: 7.7%;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  /* background: linear-gradient(135deg, #f0f0f0, #d9e1e8); */
+  background: linear-gradient(135deg, #1c1c1c 0%, #333 100%);
+  padding: 2rem 0;
 }
 
-/* Card Animation */
+.projects-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #e74c3c;
+  position: relative;
+  display: inline-block;
+}
+
+.projects-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #e74c3c;
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  animation: slideIn 1s ease-out;
+}
+
+/* Card Styles */
 .card {
   position: relative;
   overflow: hidden;
-  transform: scale(1);
-  transition: transform 0.3s ease-in-out;
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .card:hover {
   transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card-img-top {
   transition: transform 0.3s ease-in-out;
+  border-bottom: 1px solid #ddd;
 }
 
 .card:hover .card-img-top {
@@ -34,25 +51,53 @@ body {
 }
 
 .card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
   transition: color 0.3s ease-in-out;
 }
 
-.card:hover .card-title {
-  color: #007bff;
-}
-
 .card-body {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
   padding: 1rem;
-  transform: translateY(100%);
-  transition: transform 0.3s ease-in-out;
+  border-radius: 0 0 15px 15px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .card:hover .card-body {
-  transform: translateY(0%);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004080;
+}
+
+.btn-light {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.btn-light:hover {
+  background-color: #f1f1f1;
+  border-color: #dddddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 1.25rem;
+  }
+
+  .card-text {
+    font-size: 0.875rem;
+  }
 }

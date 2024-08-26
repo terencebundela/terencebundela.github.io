@@ -1,37 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Monoton&family=Pacifico&family=Passions+Conflict&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Syne+Mono&display=swap');
+.image-container {
+  position: relative;
+  display: inline-block;
+  border-radius: 15px; /* Rounded corners */
+  padding: 10px;
+  background-color: #f9f9f9; /* Light background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.experience-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #e74c3c;
+  position: relative;
+  display: inline-block;
+}
+
+.experience-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #e74c3c;
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  animation: slideIn 1s ease-out;
+}
+
+/* Experience Section Styling */
+.experience-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+  /* background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%); */
+}
+
+.experience-image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.experience-image:hover {
+  transform: scale(1.05);
+}
+
+.experience-details {
+  margin-top: 2rem;
+}
+
+.experience-point {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.experience-point h3 {
+  font-size: 1.25rem;
+  color: #284878;
+}
+
+.experience-point p {
+  color: #333;
+}
+
+.experience-point:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Resume Button Styling */
+#resume-btn {
+  display: inline-block;
+  background-color: #d9534f; /* Modern button color */
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+}
 
 #resume-btn:hover {
-    background-color: #eb3842;
+  background-color: #c9302c; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
-/* Button Animation */
-
-.exp {
-    position: relative;
-    bottom: 6%;
+#resume-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); /* Focus outline */
 }
 
-.vector-image {
-    position: relative;
-    top: 6rem;
+/* Footer Styling */
+.footer {
+  background-color: #284e21;
+  color: #fff;
 }
 
-/* Add this CSS to your existing styles or in a separate <style> tag */
-html, body {
-    height: 100%;
-  }
-  
-  .container {
-    min-height: 100%;
-  }
-  
-  footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: #C69B7B;
-    padding: 15px 0;
-    text-align: center;
-  }
-  
+.footer .h3 {
+  font-family: 'Passions Conflict', cursive;
+  color: #d9534f;
+}
+
+.footer .fa {
+  color: #fff;
+}
+
+.footer .fa:hover {
+  color: #d9534f;
+}

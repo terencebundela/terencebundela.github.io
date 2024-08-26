@@ -2,8 +2,39 @@
 
 #contact {
     position: absolute;
-    top: 7.7%;
+    /* top: 7.7%; */
     left: 0;
     height: 100%;
     width: 100%;
+    background: linear-gradient(135deg, #1c1c1c 0%, #333 100%);
 }
+
+.contact-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #e74c3c;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .contact-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #e74c3c;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    animation: slideIn 1s ease-out;
+  }
+
+  .contact-subtitle {
+    font-size: 1.25rem;
+    color: #b0bec5;
+    margin-top: 10px;
+    font-weight: 300;
+    animation: fadeIn 1.5s ease-out;
+  }

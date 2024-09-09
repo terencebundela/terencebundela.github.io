@@ -87,6 +87,13 @@ h1, h2, h3, p {
   font-size: 4rem;
 }
 
+/* Container styles for alignment */
+.home-intro {
+  text-align: center;
+  margin-top: 50px; /* Adjust the top margin for better alignment */
+  font-size: 1.5em; /* Adjust font size as needed */
+}
+
 /* Typing Effects */
 .typewriter-text,
 .typewriter-text2 {
@@ -94,52 +101,58 @@ h1, h2, h3, p {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 0.15em solid #062832;
-  animation: blinkTextCursor 500ms steps(44, end) infinite;
+  border-right: 0.15em solid #062832; /* Cursor */
+  animation: blinkTextCursor 500ms steps(44, end) infinite; /* Blinking cursor */
 }
 
 .typewriter-text {
-  animation: typewriter 3s steps(30, end) 0.5s forwards; /* Adds slight delay before starting */
-  width: 0; /* Initial width set to 0 for proper animation */
+  animation: typewriter 3s steps(30, end) 0.5s forwards; /* Delay and typewriter effect for the first line */
+  width: 0; /* Initial width for the typing animation */
 }
 
 .typewriter-text2 {
-  animation: typewriter2 4s steps(44, end) 3.5s forwards; /* Starts after the first animation completes */
-  width: 0; /* Initial width set to 0 for proper animation */
+  animation: typewriter2 4s steps(44, end) 3.5s forwards; /* Typewriter effect for the second line after the first */
+  width: 0; /* Initial width for the typing animation */
+  border-right: none; /* Hide the cursor initially */
 }
 
+/* Keyframes for the first line of text */
 @keyframes typewriter {
   from {
     width: 0;
     border-right: 0.1em solid #062832;
   }
-
   to {
-    width: 24em; /* Adjust width based on the actual text length */
-    border-right: 0.15em solid transparent;
+    width: 20em; /* Adjust width based on the length of the first text */
+    border-right: 0.15em solid transparent; /* Hide the cursor after typing */
   }
 }
 
+/* Keyframes for the second line of text */
 @keyframes typewriter2 {
   from {
     width: 0;
     border-right: 0.15em solid #062832;
   }
-
   to {
-    width: 36em; /* Adjust width based on the actual text length */
-    border-right: 0.15em solid transparent;
+    width: 34em; /* Adjust width based on the length of the second text */
+    border-right: 0.15em solid transparent; /* Hide the cursor after typing */
   }
 }
 
+/* Blinking cursor animation */
 @keyframes blinkTextCursor {
   from {
     border-right-color: #062832;
   }
-
   to {
     border-right-color: transparent;
   }
+}
+
+/* Show the cursor for the second line only after the first line finishes typing */
+.typewriter-text2.start-cursor {
+  border-right: 0.15em solid #062832;
 }
 /* About Section */
 .about-section {

@@ -7,7 +7,7 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'portfolio';
+  title = 'Terence Bundela | Full-Stack Developer';
   isPageLoading: boolean = true;
   @ViewChild('contentWrapper') contentWrapper: any; // Add this line
 

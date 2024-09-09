@@ -85,7 +85,7 @@
   border: none;
   border-radius: 8px;
   transition: all 0.3s ease;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: bold;
   text-decoration: none;
 }

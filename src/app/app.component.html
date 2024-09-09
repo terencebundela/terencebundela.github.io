@@ -1,12 +1,12 @@
-<!-- Loader -->
+<!-- Loader
 <div id="loader" class="loader-container" *ngIf="isPageLoading">
   <div class="lds-ripple"><div></div><div></div></div>
-</div>
+</div> -->
 
 <!-- Content -->
 
-<div #contentWrapper id="content" *ngIf="!isPageLoading" style="display: none;">
-  <app-navbar></app-navbar>
-</div>
+<!-- <div #contentWrapper id="content" *ngIf="!isPageLoading" style="display: none;">
+</div> -->
+<app-navbar></app-navbar>
 
 <router-outlet></router-outlet>

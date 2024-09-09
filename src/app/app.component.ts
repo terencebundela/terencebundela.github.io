@@ -15,22 +15,22 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     // Simulate stopping the loader after a short delay (e.g., 1000 milliseconds) when the app starts
-    setTimeout(() => {
-      this.isPageLoading = false;
-    }, 1000);
+    // setTimeout(() => {
+    //   this.isPageLoading = false;
+    // }, 1000);
 
     // Listen for navigation end event to hide the loader
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        this.isPageLoading = false;
-      }
-    });
+    // this.router.events.subscribe((event) => {
+    //   if (event instanceof NavigationEnd) {
+    //     this.isPageLoading = false;
+    //   }
+    // });
   }
 
   ngAfterViewInit() {
     // Hide the navigation bar after the loader has completed
-    setTimeout(() => {
-      this.contentWrapper.nativeElement.style.display = 'block';
-    }, 1000);
+    // setTimeout(() => {
+    //   this.contentWrapper.nativeElement.style.display = 'block';
+    // }, 1000);
   }
 }

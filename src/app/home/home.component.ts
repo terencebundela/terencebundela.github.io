@@ -10,23 +10,23 @@ import { LoaderService } from '../loader.service';
 })
 export class HomeComponent implements OnInit {
 
-  isPageLoading: boolean = true;
+  // isPageLoading: boolean = true;
   @ViewChild('contentWrapper') contentWrapper: any; // Add this line
 
   constructor(private router: Router) {}
 
   ngOnInit() {
     // Simulate stopping the loader after a short delay (e.g., 1000 milliseconds) when the app starts
-    setTimeout(() => {
-      this.isPageLoading = false;
-    }, 1000);
+    // setTimeout(() => {
+    //   this.isPageLoading = false;
+    // }, 1000);
 
     // Listen for navigation end event to hide the loader
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        this.isPageLoading = false;
-      }
-    });
+    // this.router.events.subscribe((event) => {
+    //   if (event instanceof NavigationEnd) {
+    //     this.isPageLoading = false;
+    //   }
+    // });
   }
 
   // ngAfterViewInit() {
